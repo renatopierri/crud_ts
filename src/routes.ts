@@ -30,6 +30,7 @@ router.post('/item', (req, res) => {
 }); */
 
 // Rota GET para inserir dados no banco de dados
+// http://localhost:3000/insere?name=Renato&description=programador
 router.get('/insere', (req, res) => {
   const { name, description } = req.query;
   
@@ -45,6 +46,18 @@ router.get('/insere', (req, res) => {
     }
   });
 });
+
+Falta montar:
+//Rota GET para listar dados do banco de dados
+//Rota GET para atualizar dados no banco de dados
+//Rota GET para excluir dados do banco de dados
+
+//Rota POST para listar dados do banco de dados
+//Rota POST para atualizar dados no banco de dados
+//Rota POST para excluir dados do banco de dados
+
+
+
 // More CRUD routes...
 
 export default router;
