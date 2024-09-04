@@ -5,8 +5,9 @@ const router = Router();
 
 const connection = mysql.createConnection({
   host: 'localhost',
+  port: 3307,
   user: 'root',
-  password: 'q1w2e3r4$',
+  password: '',
   database: 'ts_crud'
 });
 
