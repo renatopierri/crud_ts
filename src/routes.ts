@@ -79,7 +79,9 @@ da linguagem e pensar fora da caixa.
 Agora que você já sabe a resposta, que tal elaborar um prompt para a IA de  sua
 preferência de tal forma que ela responda com a solução correta, ou seja,  diga
 para verificar o parâmetro PORT da string de conexão e outro prompt  que  mande
-usar o comando opcional --skip-grant-tables no arquivo de configuração my.ini?
+usar o comando opcional --skip-grant-tables no arquivo my.ini e  finalmente  um
+prompt que sugira o uso da opção 'insecureAuth: true' nos parâmetros de conexão
+ao banco?
 
 */
 
