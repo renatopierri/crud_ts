@@ -60,7 +60,7 @@ https://mariadb.com/kb/en/mariadbd-options/#-skip-grant-tables
 https://code.openark.org/blog/mysql/dangers-of-skip-grant-tables
 
 ************************************
-Agora que você encontrou a resposta:
+
 É muito comum um desenvolvedor ficar travado na resolução de um problema, em um
 beco sem saída, por horas e até por dias seguidos. A saída para esses  casos  é
 revisar o código, estudar a infraestrutura, consultar  os  parâmetros opcionais
