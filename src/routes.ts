@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   user: 'root',
   password: '',
   database: 'ts_crud',
-  insecureAuth = true
+  insecureAuth: true
 });
 
 /*
@@ -61,14 +61,13 @@ https://www.npmjs.com/package/mysql#install
 Esse pacote é o que permite a conexão do Node.js com o banco de dados MariaDB.
 LENDO a documentação, nas opções de conexão, você  irá  encontrar  o  parâmetro
 'insecureAuth' que permite conexões a uma instância do MySQL  que  solicite  um
-método de autenticação antigo (inseguro).  
+método de autenticação antigo (inseguro), conforme o código acima.  
 
 Maiores detalhes nos links:
 https://mariadb.com/kb/en/mariadbd-options/#-skip-grant-tables
 https://code.openark.org/blog/mysql/dangers-of-skip-grant-tables
 https://www.npmjs.com/package/mysql#install
 
-Outra opção no Node.js seria utilizar a opção insecureAuth = true
 
 ************************************
 
