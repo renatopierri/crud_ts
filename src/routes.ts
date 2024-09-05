@@ -8,7 +8,8 @@ const connection = mysql.createConnection({
   port: 3307,
   user: 'root',
   password: '',
-  database: 'ts_crud'
+  database: 'ts_crud',
+  insecureAuth = true
 });
 
 /*
@@ -28,8 +29,8 @@ da conexão, para que a aplicação consiga falar com o banco de dados MariaDB.
 
 *** Resposta do  item 4 da tarefa ***
 
-Basta adicionar o parâmetro --skip-grant-tables na seção [mysqld] do arquivo de
-configuração my.ini e reiniciar o servidor MariaDB.
+Adicionar o parâmetro --skip-grant-tables na seção [mysqld] do arquivo de
+configuração my.ini e reiniciar o servidor MariaDB (baixa segurança).
 
 Motivo:
 
@@ -55,9 +56,19 @@ Use mariadb-admin flush-privileges, mariadb-admin reload or FLUSH PRIVILEGES to
 resume using the grant tables.  From  MariaDB  10.10,  available  as  a  system
 variable as well. 
 
+Uma solução mais elegante, seria consultar a documentação do pacote  npm mysql.
+https://www.npmjs.com/package/mysql#install
+Esse pacote é o que permite a conexão do Node.js com o banco de dados MariaDB.
+LENDO a documentação, nas opções de conexão, você  irá  encontrar  o  parâmetro
+'insecureAuth' que permite conexões a uma instância do MySQL  que  solicite  um
+método de autenticação antigo (inseguro).  
+
 Maiores detalhes nos links:
 https://mariadb.com/kb/en/mariadbd-options/#-skip-grant-tables
 https://code.openark.org/blog/mysql/dangers-of-skip-grant-tables
+https://www.npmjs.com/package/mysql#install
+
+Outra opção no Node.js seria utilizar a opção insecureAuth = true
 
 ************************************
 
