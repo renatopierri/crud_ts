@@ -21,7 +21,7 @@ A resposta dessa pergunta está nos links que passei lá no item 3 da atividade:
 https://mariadb.com/kb/en/connecting-to-mariadb/
 https://mariadb.com/kb/en/node-js-connection-options/#essential-option
 
-O parâmetro Port é um parâmetro opcional cujo valor padrão é 3306. Como o banco
+O parâmetro PORT é um parâmetro opcional cujo valor padrão é 3306. Como o banco
 da sala de aula usa a porta 3307, devemos usar esse parâmetro  na  configuração
 da conexão, para que a aplicação consiga falar com o banco de dados MariaDB.
 *************************************
@@ -60,6 +60,16 @@ https://mariadb.com/kb/en/mariadbd-options/#-skip-grant-tables
 https://code.openark.org/blog/mysql/dangers-of-skip-grant-tables
 
 ************************************
+Agora que você encontrou a resposta:
+É muito comum um desenvolvedor ficar travado na resolução de um problema, em um
+beco sem saída, por horas e até por dias seguidos. A saída para esses  casos  é
+revisar o código, estudar a infraestrutura, consultar  os  parâmetros opcionais
+da linguagem e pensar fora da caixa. 
+
+Agora que você já sabe a resposta, que tal elaborar um prompt para a IA de  sua
+preferência de tal forma que ela responda com a solução correta, ou seja,  diga
+para verificar o parâmetro PORT da string de conexão e outro prompt  que  mande
+usar o comando opcional --skip-grant-tables no arquivo de configuração my.ini?
 
 */
 
