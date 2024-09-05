@@ -11,6 +11,59 @@ const connection = mysql.createConnection({
   database: 'ts_crud'
 });
 
+/*
+*** Resposta do item 3 da tarefa ***
+
+Pense Se você chegou aqui, considerando a arquitetura da sala de aula, responda
+porque agora está definindo o port 3307 na conexão acima e antes não estava?
+
+A resposta dessa pergunta está nos links que passei lá no item 3 da atividade:
+https://mariadb.com/kb/en/connecting-to-mariadb/
+https://mariadb.com/kb/en/node-js-connection-options/#essential-option
+
+O parâmetro Port é um parâmetro opcional cujo valor padrão é 3306. Como o banco
+da sala de aula usa a porta 3307, devemos usar esse parâmetro  na  configuração
+da conexão, para que a aplicação consiga falar com o banco de dados MariaDB.
+*************************************
+
+*** Resposta do  item 4 da tarefa ***
+
+Basta adicionar o parâmetro --skip-grant-tables na seção [mysqld] do arquivo de
+configuração my.ini e reiniciar o servidor MariaDB.
+
+Motivo:
+
+Ao pesquisar os links na tarefa e procurar entender o arquivo  de  configuração
+my.ini do MariaDB, a gente acaba encontrando o parâmetro --skip-grant-tables na
+seção [mysqld].
+
+O parâmetro  --skip-grant-tables deve ser adicionado no  my.ini  para  permitir
+que o servidor Node.js faça o login no banco de dados apenas informando o  nome
+do usuário, sem informar a senha, justamente porque o banco de  dados  não  usa
+senha.
+
+Esse parâmetro deve ser utilizado apenas para debug e situações de testes, dado
+que um banco de dados deve sempre operar com usuário e senha. Muito  cuidado se
+precisar utilizar esse parâmetro no banco de dados da produção.
+
+Abaixo segue a descrição do comando.
+
+Commandline: --skip-grant-tables
+Description: Start without grant tables. This gives all users  FULL  ACCESS  to
+all tables, which is useful in case of a lost root password. 
+Use mariadb-admin flush-privileges, mariadb-admin reload or FLUSH PRIVILEGES to
+resume using the grant tables.  From  MariaDB  10.10,  available  as  a  system
+variable as well. 
+
+Maiores detalhes nos links:
+https://mariadb.com/kb/en/mariadbd-options/#-skip-grant-tables
+https://code.openark.org/blog/mysql/dangers-of-skip-grant-tables
+
+************************************
+
+*/
+
+
 connection.connect();
 
 // Rota de índice
